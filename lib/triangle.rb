@@ -8,7 +8,7 @@ class Triangle
   end
   
   def kind
-    # valid_triangle
+    valid_triangle
     if a == b && b == c && c == a
       :equilateral
        elsif a == b || b == c || a == c
@@ -18,9 +18,12 @@ class Triangle
     end
   end
       
-  class TriangleError < StandardError
-    def message 
-      "you must give the get_married method an argument of an instance of the person class!"
-    end
+  def validate_triangle
+    real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
+    [a, b, c].each { |s| real_triangle << false if s <= 0 }
+    raise TriangleError if real_triangle.include?(false)
   end
+end
+
+class TriangleError < StandardError
 end
