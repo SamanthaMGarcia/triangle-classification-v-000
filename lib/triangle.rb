@@ -18,6 +18,7 @@ class Triangle
       :scalene
     end
   end
+end
 
     
   class TriangleError < StandardError
@@ -25,4 +26,3 @@ class Triangle
       "Your triangle is invalid!"
     end
   end
-end
