@@ -8,7 +8,7 @@ class Triangle
   end
   
   def kind
-    # valid_triangle
+    valid_triangle
     if a == b && b == c && c == a
       :equilateral
        elsif a == b || b == c || a == c
@@ -17,6 +17,9 @@ class Triangle
       :scalene
     end
   end
+  
+  def valid_triangle
+    
       
   class TriangleError < StandardError
     def message 
