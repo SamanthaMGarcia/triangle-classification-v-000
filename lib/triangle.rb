@@ -8,9 +8,9 @@ class Triangle
   end
   
   def kind
-    if a > 0 == b > 0 && b > 0 == c > 0 && c > 0 == a > 0
+    if a == b && b == c && c == a
       :equilateral
-       elsif a > 0 == b > 0 || b > 0 == c > 0 || a > 0 == c > 0
+       elsif a == b || b == c || a == c
       :isosceles
     else
       :scalene
