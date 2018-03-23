@@ -8,7 +8,7 @@ class Triangle
   end
   
   def kind
-    valid_triangle
+    actual_triangle
     if a == b && b == c && c == a
       :equilateral
        elsif a == b || b == c || a == c
@@ -18,7 +18,7 @@ class Triangle
     end
   end
   
-  def valid_triangle
+  def actual_triangle
     
       
   class TriangleError < StandardError
